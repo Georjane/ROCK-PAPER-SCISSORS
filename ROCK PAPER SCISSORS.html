@@ -27,11 +27,11 @@
                 }else if(playerSelection === "paper" && computerSelection === "scissors"){
                   return ("You Lose!");
                 }
- }
+ } let playerSelection = prompt("Please choose either rock, scissors or paper!", "paper");
                 var a=0;
                 var b=0;
                 for(let i=0; i<5; i++){
-                  var playerSelection = prompt("Please choose either rock, scissors or paper!", "paper");
+                
                 playerSelection = playerSelection.toLowerCase();
                 var computerSelection = computerPlay();
                 console.log(playRound(playerSelection, computerSelection));
