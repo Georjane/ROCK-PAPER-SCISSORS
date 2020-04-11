@@ -6,11 +6,12 @@
     </head>
     <body>
         <script>
-            function computerPlay(){
+  function game(){
+    function computerPlay(){
                 let x = Math.floor(Math.random()*10);
                 return (x < 3) ? "rock": (x > 7) ? "scissors": "paper";
             }
- function playRound(playerSelection, computerSelection) {
+   function playRound(playerSelection, computerSelection) {
                 if (playerSelection === computerSelection){
                     return ("It is a Tie!");
                 }else if(playerSelection === "rock" && computerSelection === "scissors"){ 
@@ -27,10 +28,25 @@
                   return ("You Lose!");
                 }
  }
-                let playerSelection = "paper";
+                var a=0;
+                var b=0;
+                for(let i=0; i<5; i++){
+                  var playerSelection = prompt("Please choose either rock, scissors or paper!", "paper");
                 playerSelection = playerSelection.toLowerCase();
-                const computerSelection = computerPlay();
+                var computerSelection = computerPlay();
                 console.log(playRound(playerSelection, computerSelection));
+                
+                if(playRound(playerSelection, computerSelection) === "You Win!"){
+                  a++;
+                }else if(playRound(playerSelection, computerSelection) === "You Lose!"){
+                  b++;
+                }
+                }
+          
+                (a > b) ? console.log("Winner!") : (a < b) ? console.log("Loser!") : console.log("Tie!");
+  }
+
+  game();
         </script>
     </body>
 
