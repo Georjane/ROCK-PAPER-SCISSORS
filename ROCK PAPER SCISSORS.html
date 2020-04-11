@@ -27,7 +27,8 @@
                   return ("You Lose!");
                 }
  }
-                const playerSelection = "paper";
+                let playerSelection = "paper";
+                playerSelection = playerSelection.toLowerCase();
                 const computerSelection = computerPlay();
                 console.log(playRound(playerSelection, computerSelection));
         </script>
